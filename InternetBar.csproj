@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B045BCF4-E3C0-4940-978D-F43E895CFA48}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InternetBar</RootNamespace>
+    <AssemblyName>鼎盛网吧管理系统</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cleanmymac.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.8.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="IrisSkin4">
+      <HintPath>C:\Users\ACCP7.0\Desktop\IrisSkin破解版和皮肤包\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="VocationalWorkInfo\Info.cs" />
+    <Compile Include="InternetBarDAL\DBHelper.cs" />
+    <Compile Include="VocationalWorkInfo\frmDeskKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmDeskKey.designer.cs">
+      <DependentUpon>frmDeskKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmSuoPing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmSuoPing.designer.cs">
+      <DependentUpon>frmSuoPing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmKey.designer.cs">
+      <DependentUpon>frmKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\Form4.designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainInfo\frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainInfo\frmAbout.designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInfo\FrmAddAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInfo\FrmAddAdmin.Designer.cs">
+      <DependentUpon>FrmAddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComputerInfo\frmAddComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComputerInfo\frmAddComputer.designer.cs">
+      <DependentUpon>frmAddComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmAddPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmAddPrice.designer.cs">
+      <DependentUpon>frmAddPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\FrmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfo\FrmAddUser.Designer.cs">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInfo\frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInfo\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComputerInfo\frmBaoFeiNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComputerInfo\frmBaoFeiNote.Designer.cs">
+      <DependentUpon>frmBaoFeiNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\FrmChongZhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfo\FrmChongZhi.Designer.cs">
+      <DependentUpon>FrmChongZhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainInfo\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainInfo\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainInfo\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainInfo\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmMC.Designer.cs">
+      <DependentUpon>frmMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmReckon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmReckon.designer.cs">
+      <DependentUpon>frmReckon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComputerInfo\frmSelectComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComputerInfo\frmSelectComputer.designer.cs">
+      <DependentUpon>frmSelectComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmShopSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmShopSum.designer.cs">
+      <DependentUpon>frmShopSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmStartComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmStartComputer.designer.cs">
+      <DependentUpon>frmStartComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmSwap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VocationalWorkInfo\frmSwap.designer.cs">
+      <DependentUpon>frmSwap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInfo\frmUpdateAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInfo\frmUpdateAdmin.designer.cs">
+      <DependentUpon>frmUpdateAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComputerInfo\frmUpdateComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComputerInfo\frmUpdateComputer.designer.cs">
+      <DependentUpon>frmUpdateComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInfo\frmUpdateMoneyBySection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInfo\frmUpdateMoneyBySection.designer.cs">
+      <DependentUpon>frmUpdateMoneyBySection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmUpdateVip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmUpdateVip.Designer.cs">
+      <DependentUpon>frmUpdateVip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmUserInfo.designer.cs">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmUserNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmUserNote.designer.cs">
+      <DependentUpon>frmUserNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmVip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmVip.Designer.cs">
+      <DependentUpon>frmVip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="VocationalWorkInfo\frmDeskKey.resx">
+      <DependentUpon>frmDeskKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VocationalWorkInfo\frmSuoPing.resx">
+      <DependentUpon>frmSuoPing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VocationalWorkInfo\frmKey.resx">
+      <DependentUpon>frmKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VocationalWorkInfo\Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainInfo\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInfo\FrmAddAdmin.resx">
+      <DependentUpon>FrmAddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComputerInfo\frmAddComputer.resx">
+      <DependentUpon>frmAddComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VocationalWorkInfo\frmAddPrice.resx">
+      <DependentUpon>frmAddPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\FrmAddUser.resx">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInfo\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComputerInfo\frmBaoFeiNote.resx">
+      <DependentUpon>frmBaoFeiNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\FrmChongZhi.resx">
+      <DependentUpon>FrmChongZhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainInfo\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainInfo\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VocationalWorkInfo\frmMC.resx">
+      <DependentUpon>frmMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VocationalWorkInfo\frmReckon.resx">
+      <DependentUpon>frmReckon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComputerInfo\frmSelectComputer.resx">
+      <DependentUpon>frmSelectComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmShopSum.resx">
+      <DependentUpon>frmShopSum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VocationalWorkInfo\frmStartComputer.resx">
+      <DependentUpon>frmStartComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VocationalWorkInfo\frmSwap.resx">
+      <DependentUpon>frmSwap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInfo\frmUpdateAdmin.resx">
+      <DependentUpon>frmUpdateAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComputerInfo\frmUpdateComputer.resx">
+      <DependentUpon>frmUpdateComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInfo\frmUpdateMoneyBySection.resx">
+      <DependentUpon>frmUpdateMoneyBySection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmUpdateVip.resx">
+      <DependentUpon>frmUpdateVip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmUserInfo.resx">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmUserNote.resx">
+      <DependentUpon>frmUserNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmVip.resx">
+      <DependentUpon>frmVip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="BackguoundColors\Calmness.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\CalmnessColor1.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\CalmnessColor2.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\DeepCyan.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\DeepGreen.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\DeepOrange.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\DiamondBlue.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\DiamondGreen.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Eighteen.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\EighteenColor1.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\EighteenColor2.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Emerald.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\EmeraldColor1.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\EmeraldColor2.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\EmeraldColor3.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\GlassBrown.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\GlassGreen.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\GlassOrange.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Longhorn.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\MacOS.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Midsummer.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\MidsummerColor1.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\MidsummerColor2.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\MidsummerColor3.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\MP10.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\MSN.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\OneBlue.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\OneCyan.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\OneGreen.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\OneOrange.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Page.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\PageColor1.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\PageColor2.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Silver.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\SilverColor1.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\SilverColor2.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\SportsBlack.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\SportsBlue.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\SportsCyan.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\SportsGreen.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\SportsOrange.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\SteelBlack.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\SteelBlue.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\vista1.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\vista1_green.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Vista2_color1.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Vista2_color2.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Vista2_color3.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Vista2_color4.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Vista2_color5.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Vista2_color6.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Vista2_color7.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Warm.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\WarmColor1.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\WarmColor2.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\WarmColor3.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\Wave.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\WaveColor1.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\WaveColor2.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\XPBlue.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\XPGreen.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\XPOrange.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BackguoundColors\XPSilver.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cleanmymac.ico" />
+    <Content Include="BackguoundColors\11222.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\calmness.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\calmness_color1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\calmness_color2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\deepcyan.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\deepgreen.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\deeporange.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\diamondblue.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\diamondgreen.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\eighteen.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\eighteen_color1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\eighteen_color2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\emerald.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\emerald_color1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\emerald_color2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\emerald_color3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\glassbrown.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\glassgreen.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\glassorange.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\longhorn.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\macos.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\midsummer.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\midsummer_color1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\midsummer_color2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\midsummer_color3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\mp10.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\msn.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\oneblue.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\onecyan.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\onegreen.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\oneorange.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\page.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\page_color1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\page_color2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\silver.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\silver_color1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\silver_color2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\sportsblack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\sportsblue.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\sportscyan.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\sportsgreen.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\sportsorange.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\steelblack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\steelblue.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\vista1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\vista1_green.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\vista2_color1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\vista2_color2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\vista2_color3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\vista2_color4.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\vista2_color5.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\vista2_color6.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\vista2_color7.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\warm.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\warm_color1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\warm_color2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\warm_color3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\wave.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\wave_color1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\wave_color2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\xpblue.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\xpgreen.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\xporange.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BackguoundColors\xpsilver.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
